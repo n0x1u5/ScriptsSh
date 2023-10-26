@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function ctrl_c(){ 
-	echo -e "\n\n[1] Saltendo...\n"
+	echo -e "\n\n[1] Saliendo...\n"
 	tput cnorm; exit 1
 }
 
@@ -25,7 +25,6 @@ function checkPort(){
 
 tput civis # Ocultar el cursor
 
-
 if [ $1 ]; then 
 	for port in ${ports[@]}; do
  		checkPort $1 $port &
@@ -35,5 +34,4 @@ else
 fi
 
 wait
-
 tput cnorm
